@@ -1,0 +1,32 @@
+.footer_section {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.footer_caption {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.copyright_text {
+  color: var(--black);
+  font-size: 16px;
+}
+
+.social_media_list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+
+.social_media_list li a{
+    
+}
