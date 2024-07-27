@@ -3,5 +3,5 @@ import LayoutWrapper from '@/components/layout/LayoutWrapper.vue'
 </script>
 
 <template>
-  <LayoutWrapper> </LayoutWrapper>
+  <LayoutWrapper> lorem5555 </LayoutWrapper>
 </template>

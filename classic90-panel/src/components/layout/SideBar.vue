@@ -1,5 +1,16 @@
-<script>
+<script setup>
+import {
+  House,
+  CircleHelp,
+  LogOut,
+  Settings,
+  User,
+  ReceiptText,
+  Calendar,
+  ChartColumn
+} from 'lucide-vue-next'
 import { ref } from 'vue'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const sidebarLinkList = ref([
   {
@@ -8,14 +19,14 @@ const sidebarLinkList = ref([
     linkItems: [
       {
         id: '#link1',
-        icon: '',
+        icon: House,
         title: 'dashboard',
         goToPath: '/',
         activePaths: ['/']
       },
       {
         id: '#link2',
-        icon: '',
+        icon: User,
         title: 'audience',
         childLinks: [
           {
@@ -28,21 +39,21 @@ const sidebarLinkList = ref([
       },
       {
         id: '#link3',
-        icon: '',
+        icon: ReceiptText,
         title: 'Posts',
         goToPath: '/',
         activePaths: ['/']
       },
       {
         id: '#link4',
-        icon: '',
+        icon: Calendar,
         title: 'Schedules',
         goToPath: '/',
         activePaths: ['/']
       },
       {
         id: '#link5',
-        icon: '',
+        icon: ChartColumn,
         title: 'Income',
         childLinks: [
           {
@@ -79,7 +90,7 @@ const sidebarLinkList = ref([
     linkItems: [
       {
         id: '#link6',
-        icon: '',
+        icon: Settings,
         title: 'settings',
         childLinks: [
           {
@@ -97,15 +108,74 @@ const sidebarLinkList = ref([
 
 <template>
   <aside class="side--bar">
-    <div class="flex items-center gap-3">
-        
-        <div></div>
+    <div class="w-full space-y-6">
+      <div class="flex items-center gap-3.5">
+        <Avatar>
+          <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <div class="space-y-0.5">
+          <p class="uppercase text-xs">Product Manager</p>
+          <h3 class="text-base font-semibold">Andrew Smith</h3>
+        </div>
+      </div>
+      <ul class="w-full list-none">
+        <li
+          class="w-full border-t border-solid border-border py-4"
+          v-for="(item, index) in sidebarLinkList"
+          :key="index"
+        >
+          <p class="uppercase text-xs tracking-wider pl-1.5">{{ item.title }}</p>
+          <ul class="w-full space-y-1.5 mt-2.5">
+            <li class="w-full" v-for="(link, linkIndex) in item.linkItems" :key="linkIndex">
+              <RouterLink :to="link.goToPath" class="sidebar--link">
+                <div class="flex items-center gap-3">
+                  <component :is="link.icon" v-if="link.icon" />
+                  <p class="title">{{ link.title }}</p>
+                </div>
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="space-y-2">
+      <RouterLink to="/" class="sidebar--link">
+        <div class="flex items-center gap-3">
+          <CircleHelp />
+          <p class="title">Help</p>
+        </div>
+      </RouterLink>
+      <RouterLink to="/" class="sidebar--link text-red-600">
+        <div class="flex items-center gap-3">
+          <LogOut />
+          <p class="title">Logout Account</p>
+        </div>
+      </RouterLink>
     </div>
   </aside>
 </template>
 
 <style scoped>
 .side--bar {
-  @apply w-full h-full border-r border-solid border-border max-w-64 p-6 flex flex-col justify-between  space-y-6;
+  @apply w-full h-full border-r border-solid border-border max-w-72 p-6 flex flex-col justify-between  space-y-6 overflow-y-auto;
+}
+
+.sidebar--link {
+  @apply w-full flex items-center justify-between gap-1 py-2.5 px-3 rounded-lg transition-all;
+}
+
+.sidebar--link svg {
+  @apply w-5 h-5;
+}
+
+.sidebar--link:hover,
+.sidebar--link:hover,
+.sidebar--link.active {
+  @apply bg-accent;
+}
+
+.sidebar--link .title {
+  @apply capitalize text-base;
 }
 </style>
