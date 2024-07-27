@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
 
 :root {
   --black: #060707;
@@ -26,8 +26,7 @@ body {
   background-color: var(--nude);
 }
 
-
-input{
+input {
   background-color: white;
   border: 1px solid var(--black);
   padding: 10px 16px;
@@ -36,42 +35,73 @@ input{
   font-size: 16px;
 }
 
-input::placeholder{
+input::placeholder {
   color: var(--black);
   opacity: 0.4;
   font-weight: 400;
 }
 
-.btn{
- border: 1px solid var(--black);
- text-align: center;
- font-size: 16px;
- font-weight: 600;
- padding: 12px 48px;
- cursor: pointer;
- letter-spacing: 1px;
+.btn {
+  border: 1px solid var(--black);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 48px;
+  cursor: pointer;
+  color: var(--black);
+  letter-spacing: 1px;
 }
 
-.btn.type1{
+.btn.type1 {
   background-color: var(--green);
 }
 
-.offer-scroller{
+.offer-scroller {
   width: 100%;
   margin: 16px 0;
   background-color: var(--orange);
-  padding: 32px 0;
+  padding: 22px 0;
 }
 
-.offer--item{
+.offer--item {
   display: flex;
   align-items: center;
   gap: 32px;
   padding: 0 32px;
 }
 
-.offer--item h4{
-  font-size: 24px;
+.offer--item h4 {
+  font-size: 18px;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 36px;
+  font-weight: 600;
+  padding: 8px 40px;
+  border: 1px solid var(--black);
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  background-color: var(--purple);
+}
+
+
+.two-col{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.four-col{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }

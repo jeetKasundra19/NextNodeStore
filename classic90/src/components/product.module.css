@@ -1,0 +1,15 @@
+.product_box {
+  width: 100%;
+  border: 1px solid var(--black);
+  padding: 16px;
+}
+
+
+.product_box > * + *{
+    margin-top: 20px;
+}
+
+.product_image{
+    border: 1px solid var(--black);
+    padding-top: 128%;
+}
