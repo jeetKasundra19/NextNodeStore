@@ -6,7 +6,7 @@ import {
   Settings,
   User,
   ReceiptText,
-  Calendar,
+  ShoppingBasket,
   ChartColumn
 } from 'lucide-vue-next'
 import { ref } from 'vue'
@@ -46,9 +46,9 @@ const sidebarLinkList = ref([
       },
       {
         id: '#link4',
-        icon: Calendar,
-        title: 'Schedules',
-        goToPath: '/',
+        icon: ShoppingBasket,
+        title: 'Product',
+        goToPath: '/create-product',
         activePaths: ['/']
       },
       {
