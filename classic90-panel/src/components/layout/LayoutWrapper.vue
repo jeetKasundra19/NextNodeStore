@@ -9,8 +9,10 @@ import Header from './Header.vue'
     <SideBar />
     <div class="w-full h-full">
       <Header />
-      <ScrollArea class="w-full h-full p-2.5 bg-accent">
-        <slot></slot>
+      <ScrollArea class="w-full h-full bg-accent pb-12">
+        <div class="p-2.5">
+          <slot></slot>
+        </div>
       </ScrollArea>
     </div>
   </main>
