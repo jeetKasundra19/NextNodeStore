@@ -1,8 +1,32 @@
-const express = require('express')
-const app = express()
+require('dotenv').config();
+const express = require("express");
+const bodyParser = require('body-parser');
+const routers = require("./routers");
+const cors = require('cors');
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+const app = express();
 
-app.listen(3000)
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
+
+app.use(cors());
+
+
+
+app.use((req, res, next) => {
+    res.status(404).json({ error: "Route not found" });
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, (e) => {
+    if (e) {
+        console.error(e);
+    } else {
+        console.log(`App running on port ${PORT}`);
+    }
+});
+
+module.exports = app;
