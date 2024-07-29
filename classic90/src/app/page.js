@@ -6,6 +6,7 @@ import {
   Section,
   BannerSection,
   CollectionList,
+  NewsLetterSection
 } from "@/components";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
           <ProductBox />
         </div>
       </Section>
-      <Section container="regular" p={60} space={40}>
+      <Section container="regular" p={60} space={46}>
         <h3 className="section-title">Top Collection</h3>
         <CollectionList />
       </Section>
@@ -30,6 +31,9 @@ export default function Home() {
         <div className="four-col">
           <ProductBox />
         </div>
+      </Section>
+      <Section container="fill" py={62}>
+        <NewsLetterSection />
       </Section>
       <Section container="regular" p={20} space={40}>
         <h3 className="section-title">Lifestyle</h3>

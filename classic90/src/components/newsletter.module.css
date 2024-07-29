@@ -1,0 +1,56 @@
+.newsLetter_section {
+  width: 100%;
+  padding: 115px 0;
+  border: 0;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: var(--black);
+  background-image: url("../../public/newletter-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.newsLetter_inner_container{
+    width: 100%;
+    max-width: 808px;
+    margin: 0 auto;
+}
+
+.newsLetter_inner_container > * + *{
+    margin-top: 40px;
+}
+
+.newsLetter_content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    max-width: 596px;
+    margin: auto;
+}
+
+.newsLetter_content h3{
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+.newsLetter_content p{
+    font-size: 16px;
+}
+
+.newsLetter_form{
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 808px;
+}
+
+.newsLetter_form input{
+    width: 100%;
+}

@@ -4,3 +4,4 @@ export { default as BlogBox } from "./BlogBox";
 export { default as ProductBox } from "./ProductBox";
 export { default as BannerSection } from "./BannerSection";
 export { default as CollectionList } from "./CollectionList";
+export { default as NewsLetterSection } from "./NewsLetterSection";
