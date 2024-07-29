@@ -1,0 +1,22 @@
+.collection_container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.collection_list{
+    list-style: none;
+    max-width: 490px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.collection_list li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 20px;
+    border-top: 1px solid var(--black);
+}

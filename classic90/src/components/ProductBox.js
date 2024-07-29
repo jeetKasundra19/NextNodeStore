@@ -23,7 +23,7 @@ export default function ProductBox() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clip-path="url(#clip0_1224_17)">
+                  <g clipPath="url(#clip0_1224_17)">
                     <path
                       d="M7.49934 11.4529L3.49562 13.5041L4.26122 9.16009L1.02173 6.08261L5.49816 5.448L7.49934 1.49561L9.50189 5.448L13.9783 6.08261L10.7388 9.16009L11.5031 13.5041L7.49934 11.4529Z"
                       fill="#EF9854"
