@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": "denim-skirt",
+      "name": "Denim Skirt",
+      "basePrice": {
+        "original": 139.90,
+        "discounted": 70.00
+      },
+      "variants": [
+        {
+          "color": "blue",
+          "colorName": "Classic Blue",
+          "sizes": [
+            {
+              "size": "S",
+              "price": 70.00,
+              "inStock": true
+            },
+            {
+              "size": "M",
+              "price": 70.00,
+              "inStock": true
+            },
+            {
+              "size": "L",
+              "price": 75.00,
+              "inStock": true
+            },
+            {
+              "size": "XL",
+              "price": 75.00,
+              "inStock": false
+            }
+          ],
+          "images": [
+            "path/to/denim-skirt-blue-front.jpg",
+            "path/to/denim-skirt-blue-back.jpg"
+          ]
+        },
+        {
+          "color": "black",
+          "colorName": "Midnight Black",
+          "sizes": [
+            {
+              "size": "S",
+              "price": 72.00,
+              "inStock": true
+            },
+            {
+              "size": "M",
+              "price": 72.00,
+              "inStock": true
+            },
+            {
+              "size": "L",
+              "price": 77.00,
+              "inStock": true
+            },
+            {
+              "size": "XL",
+              "price": 77.00,
+              "inStock": true
+            }
+          ],
+          "images": [
+            "path/to/denim-skirt-black-front.jpg",
+            "path/to/denim-skirt-black-back.jpg"
+          ]
+        }
+      ],
+      "description": "Description text goes here",
+      "details": "Details text goes here",
+      "care": "Care instructions go here",
+      "rating": {
+        "score": 5,
+        "count": 10
+      }
+    }
+  ],
+  "filters": {
+    "productType": ["All", "Skirts", "Dresses", "Cardigans", "Jackets"],
+    "size": ["All", "S", "M", "L", "XL"],
+    "color": ["All", "Blue", "Black", "Purple", "Orange", "White"],
+    "availability": ["All", "In Stock", "Out of Stock"],
+    "sortBy": ["Payday Deals", "Price Low to High", "Price High to Low", "Newest"]
+  }
+}
