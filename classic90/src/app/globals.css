@@ -56,6 +56,10 @@ input::placeholder {
   background-color: var(--green);
 }
 
+.btn.type2 {
+  background-color: white;
+}
+
 .offer-scroller {
   width: 100%;
   margin: 16px 0;

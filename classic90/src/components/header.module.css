@@ -52,3 +52,21 @@
 .navbar li a:focus{
     background-color: var(--green);
 }
+
+.nav_options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.nav_options button{
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  min-height: 32px;
+  min-width: 32px;
+  max-height: 32px;
+  max-width: 32px;
+}
