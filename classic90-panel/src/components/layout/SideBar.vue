@@ -10,6 +10,7 @@ import {
   ChartColumn
 } from 'lucide-vue-next'
 import { ref } from 'vue'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const sidebarLinkList = ref([
@@ -95,7 +96,7 @@ const sidebarLinkList = ref([
         childLinks: [
           {
             id: '#sublink6',
-            title: 'Profile',
+            title: 'Available Color',
             goToPath: '/',
             activePaths: ['/']
           }
@@ -104,6 +105,12 @@ const sidebarLinkList = ref([
     ]
   }
 ])
+
+const openCollapsible = ref('') // Track the currently open collapsible
+
+const toggleCollapsible = (id) => {
+  openCollapsible.value = openCollapsible.value === id ? '' : id
+}
 </script>
 
 <template>
@@ -128,12 +135,32 @@ const sidebarLinkList = ref([
           <p class="uppercase text-xs tracking-wider pl-1.5">{{ item.title }}</p>
           <ul class="w-full space-y-1.5 mt-2.5">
             <li class="w-full" v-for="(link, linkIndex) in item.linkItems" :key="linkIndex">
-              <RouterLink :to="link.goToPath" class="sidebar--link">
+              <RouterLink :to="link.goToPath" class="sidebar--link" v-if="link.goToPath">
                 <div class="flex items-center gap-3">
                   <component :is="link.icon" v-if="link.icon" />
                   <p class="title">{{ link.title }}</p>
                 </div>
               </RouterLink>
+              <Collapsible :open="openCollapsible === link.id" v-else>
+                <CollapsibleTrigger class="sidebar--link" @click="toggleCollapsible(link.id)">
+                  <div class="flex items-center gap-3">
+                    <component :is="link.icon" v-if="link.icon" />
+                    <p class="title">{{ link.title }}</p>
+                  </div>
+                </CollapsibleTrigger>
+                <CollapsibleContent class="pl-5 ml-5 border-l pt-2 border-border">
+                  <RouterLink
+                    :to="child.goToPath"
+                    class="sidebar--link"
+                    v-for="(child, i) in link.childLinks"
+                    :key="i"
+                  >
+                    <div class="flex items-center gap-3">
+                      <p class="title">{{ child.title }}</p>
+                    </div>
+                  </RouterLink>
+                </CollapsibleContent>
+              </Collapsible>
             </li>
           </ul>
         </li>
@@ -169,7 +196,6 @@ const sidebarLinkList = ref([
   @apply w-5 h-5;
 }
 
-.sidebar--link:hover,
 .sidebar--link:hover,
 .sidebar--link.active {
   @apply bg-accent;

@@ -95,15 +95,13 @@
   gap: 16px;
 }
 
-
-.drawer_coupon_form{
-    padding: 20px 16px;
-    display: flex;
-    align-items: stretch;
-    gap: 20px;
+.drawer_coupon_form {
+  padding: 20px 16px;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
 }
 
-
-.drawer_coupon_form input{
-    max-width: 190px;
+.drawer_coupon_form input {
+  max-width: 190px;
 }

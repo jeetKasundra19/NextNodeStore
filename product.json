@@ -2,80 +2,131 @@
   "products": [
     {
       "id": "denim-skirt",
+      "sku": "DS-001",
       "name": "Denim Skirt",
-      "basePrice": {
-        "original": 139.90,
-        "discounted": 70.00
-      },
+      "brand": "YourBrandName",
+      "category": "Women's Clothing",
+      "subcategory": "Skirts",
       "variants": [
         {
           "color": "blue",
           "colorName": "Classic Blue",
+          "colorHexCode": "#0000FF",
           "sizes": [
             {
               "size": "S",
-              "price": 70.00,
-              "inStock": true
+              "price": 70.0,
+              "inStock": true,
+              "quantity": 50
             },
             {
               "size": "M",
-              "price": 70.00,
-              "inStock": true
+              "price": 70.0,
+              "inStock": true,
+              "quantity": 30
             },
             {
               "size": "L",
-              "price": 75.00,
-              "inStock": true
+              "price": 75.0,
+              "inStock": true,
+              "quantity": 20
             },
             {
               "size": "XL",
-              "price": 75.00,
-              "inStock": false
+              "price": 75.0,
+              "inStock": false,
+              "quantity": 0
             }
           ],
           "images": [
-            "path/to/denim-skirt-blue-front.jpg",
-            "path/to/denim-skirt-blue-back.jpg"
+            {
+              "url": "path/to/denim-skirt-blue-front.jpg",
+              "alt": "Denim Skirt in Classic Blue - Front View"
+            },
+            {
+              "url": "path/to/denim-skirt-blue-back.jpg",
+              "alt": "Denim Skirt in Classic Blue - Back View"
+            }
           ]
         },
         {
           "color": "black",
           "colorName": "Midnight Black",
+          "colorHexCode": "#000000",
           "sizes": [
             {
               "size": "S",
-              "price": 72.00,
-              "inStock": true
+              "price": 72.0,
+              "inStock": true,
+              "quantity": 40
             },
             {
               "size": "M",
-              "price": 72.00,
-              "inStock": true
+              "price": 72.0,
+              "inStock": true,
+              "quantity": 35
             },
             {
               "size": "L",
-              "price": 77.00,
-              "inStock": true
+              "price": 77.0,
+              "inStock": true,
+              "quantity": 25
             },
             {
               "size": "XL",
-              "price": 77.00,
-              "inStock": true
+              "price": 77.0,
+              "inStock": true,
+              "quantity": 15
             }
           ],
           "images": [
-            "path/to/denim-skirt-black-front.jpg",
-            "path/to/denim-skirt-black-back.jpg"
+            {
+              "url": "path/to/denim-skirt-black-front.jpg",
+              "alt": "Denim Skirt in Midnight Black - Front View"
+            },
+            {
+              "url": "path/to/denim-skirt-black-back.jpg",
+              "alt": "Denim Skirt in Midnight Black - Back View"
+            }
           ]
         }
       ],
       "description": "Description text goes here",
       "details": "Details text goes here",
       "care": "Care instructions go here",
+      "material": "100% Cotton",
+      "features": [
+        "High-quality denim",
+        "Available in multiple sizes",
+        "Versatile design"
+      ],
       "rating": {
         "score": 5,
         "count": 10
-      }
+      },
+      "reviews": [
+        {
+          "id": "review-001",
+          "userId": "user123",
+          "rating": 5,
+          "comment": "Great skirt, love the fit!",
+          "date": "2024-07-15T10:30:00Z"
+        }
+      ],
+      "tags": ["denim", "skirt", "women", "casual"],
+      "weight": {
+        "value": 0.5,
+        "unit": "kg"
+      },
+      "dimensions": {
+        "length": 50,
+        "width": 40,
+        "height": 2,
+        "unit": "cm"
+      },
+      "relatedProducts": ["shirt-001", "jacket-003"],
+      "createdAt": "2024-06-01T00:00:00Z",
+      "updatedAt": "2024-07-31T12:00:00Z"
     }
   ],
   "filters": {
@@ -83,6 +134,11 @@
     "size": ["All", "S", "M", "L", "XL"],
     "color": ["All", "Blue", "Black", "Purple", "Orange", "White"],
     "availability": ["All", "In Stock", "Out of Stock"],
-    "sortBy": ["Payday Deals", "Price Low to High", "Price High to Low", "Newest"]
+    "sortBy": [
+      "Payday Deals",
+      "Price Low to High",
+      "Price High to Low",
+      "Newest"
+    ]
   }
 }
