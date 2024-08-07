@@ -1,15 +1,15 @@
 <script setup>
-import { provide } from "vue";
-import { useId } from "radix-vue";
-import { FORM_ITEM_INJECTION_KEY } from "./injectionKeys";
-import { cn } from "@/lib/utils";
+import { provide } from 'vue'
+import { useId } from 'radix-vue'
+import { FORM_ITEM_INJECTION_KEY } from './injectionKeys'
+import { cn } from '@/lib/utils'
 
 const props = defineProps({
-  class: { type: null, required: false },
-});
+  class: { type: null, required: false }
+})
 
-const id = useId();
-provide(FORM_ITEM_INJECTION_KEY, id);
+const id = useId()
+provide(FORM_ITEM_INJECTION_KEY, id)
 </script>
 
 <template>
