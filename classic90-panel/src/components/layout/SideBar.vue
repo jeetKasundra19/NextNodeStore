@@ -58,7 +58,7 @@ const sidebarLinkList = ref([
         title: 'Income',
         childLinks: [
           {
-            id: '#sublink20',
+            id: '#sublink',
             title: 'Earnings',
             goToPath: '/',
             activePaths: ['/']
